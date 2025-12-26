@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Results Report</title>
+    <style>
+        body {
+            background-color: lightpink;
+            background-image: url(formimage.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        td,th {border: 2px solid pink;
+            padding: 10px;
+        }
+
+        fieldset {border: 2px solid pink;
+           padding: 15px;
+           margin-bottom: 20px;
+        }
+
+        input, select, textarea {border: 2px solid pink
+        }
+
+        button {
+            background-color: pink;
+            border: 2px solid pink;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        table {
+            background-color: white;
+            margin: 20px auto ;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+       <thead>
+        <caption>Student Results Report</caption>
+        <tr>
+            <th colspan="3">STUDENTS' INFO</th>
+            <th colspan="4">COURSES</th>
+            <th>FINAL RESULT</th>
+          </tr>
+
+            <tr>
+               <th></th>
+            <th>Name</th>
+            <th>Matric No</th>
+            <th> Mathematics</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Biology</th>
+            <th>GPA</th>
+        </tr>
+       </thead>
+
+       <tbody>
+        <tr>
+        
+           <th rowspan="4">Science Students</th>
+            <td>Ada Law</td>
+            <td>210123055</td>
+            <td>54</td>
+            <td>34</td>
+            <td>57</td>
+            <td>43</td>
+            <td>3.76</td>
+        </tr>
+
+        <tr>
+            <td>Evelyn Red</td>
+            <td>210123046</td>
+            <td>65</td>
+            <td>54</td>
+            <td>55</td>
+            <td>70</td>
+            <td>4.20</td>
+        </tr>
+
+        <tr>
+            <td>Dadi Femi</td>
+            <td>210123005</td>
+            <td>34</td>
+            <td>55</td>
+            <td>65</td>
+            <td>60</td>
+            <td>2.56</td>
+        </tr>
+
+        <tr>
+            <td>Innocent Joy</td>
+            <td>210123001</td>
+            <td>53</td>
+            <td>65</td>
+            <td>33</td>
+            <td>24</td>    
+            <td>4.65</td>
+        </tr>
+
+        <tr>
+            <th rowspan="5">Arts Students</th>
+            <td>Rachael Dauda</td>
+            <td>210123057</td>
+            <td>60</td>
+            <td>58</td>
+            <td>67</td>
+            <td>42</td>
+            <td>4.10</td>
+        </tr>
+
+        <tr>
+            <td>Ade Esther</td>
+            <td>210123184</td>
+            <td>56</td>
+            <td>17</td>
+            <td>43</td>
+            <td>56</td>
+            <td>4.78</td>
+        </tr>
+
+        <tr>
+            <td>Mary Kelvin</td>
+            <td>210123206</td>
+            <td>56</td>
+            <td>65</td>
+            <td>34</td>
+            <td>65</td>
+            <td>2.76</td>
+        </tr>
+
+        <tr>
+            <td>Mich San</td>
+            <td>210123001</td>
+            <td>53</td>
+            <td>65</td>
+            <td>33</td>
+            <td>59</td>
+            <td>4.65</td>
+        </tr>
+
+        <tr>
+            <td>Adewale Gold</td>
+            <td>210123005</td>
+            <td>34</td>
+            <td>55</td>
+            <td>65</td>
+            <td>60</td>
+            <td>4.56</td>
+        </tr>
+</tbody>
+</table>
+
+
+<form action="" method="post">
+<fieldset>
+    <legend><strong>Personal Information</strong></legend>
+
+<div>
+    <label for="name">Full Name</label><br>
+    <input type="text" id="name" name="name" placeholder="John Doe" required>
+</div>
+
+<div>
+    <label for="email">Email </label><br>
+    <input type="email" id="email" name="email" placeholder="mbgrapic6@gmail.com"  required>
+</div>
+
+<div>
+    <label for="phone">Tel </label><br>
+    <input type="tel" id="phone" name="tel" placeholder="09067585428" required>
+</div>
+
+<div>
+    <label for="date">D.O.B </label><br>
+    <input type="date" id="date" name="date">
+</div>
+
+<fieldset>
+  <legend>Gender</legend>
+         
+    <input type="radio" id="male" name="gender" value="male" >
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female" >
+    <label for="female">Female</label>
+
+    <input type="radio" id="other" name="gender" value="other" >
+    <label for="other">Other</label>
+</fieldset>
+
+<fieldset>
+  <legend><strong>Academic Information</strong></legend>
+<div>
+    <label for="matric">Matric Number </label>
+    <input type="text" id="matric" name="matric" required><br><br>
+</div>
+      
+<div>
+    <label for="department">Department</label>
+    <select id="department" name="department" required><br>
+        <option value="">Select Department</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Medicine">Medicine</option>
+        <option value="Arts">Arts</option>
+        <option value="Law">Law</option>
+        <option value="Sciences">Sciences</option>
+        <option value="Business Administration">Business Administration</option>
+        <option value="Education">Education</option>
+   </select>
+</div>
+
+
+<fieldset>
+  <legend>Level</legend>
+   
+    <input type="radio" id="100" name="level" value="100">
+    <label for="100">100</label>
+
+    <input type="radio" id="200" name="level" value="200">
+    <label for="200">200</label>
+    
+    <input type="radio" id="300" name="level" value="300">
+    <label for="300">300</label>
+    
+    <input type="radio" id="400" name="level" value="400">
+    <label for="400">400</label>
+
+    <input type="radio" id="500" name="level" value="500">
+    <label for="500">500</label>
+</fieldset>
+
+<fieldset>
+    <legend> Mode Of Study</legend>
+
+    <input type="radio" id="full" name="mode-of-study" value="Full-Time">
+    <label for="full">Full-Time</label>
+
+    <input type="radio" id="part" name="mode-of-study" value="Part-Time">
+    <label for="part">Part-Time</label>
+</fieldset>
+
+</fieldset>
+
+<fieldset>
+  <legend><strong>Course Registration</strong></legend>
+
+    <input type="checkbox" id="maths" name="mathematics">
+    <label for="maths">Mathematics</label>
+
+    <input type="checkbox" id="english" name="english">
+    <label for="english">English Language</label>
+
+    <input type="checkbox" id="physics" name="physics">
+    <label for="physics">Physics</label>
+
+    <input type="checkbox" id="literature" name="literature">
+    <label for="literature">Literature</label>
+
+    <input type="checkbox" id="history" name="history">
+    <label for="history">History</label>
+
+    <input type="checkbox" id="geography" name="geography">
+    <label for="geography">Geography</label>
+
+    <input type="checkbox" id="biology" name="biology">
+    <label for="biology">Biology</label>
+
+    <input type="checkbox" id="bus-admin" name="bus-admin">
+    <label for="bus-admin">Business Administration</label>
+
+    <input type="checkbox" id="criminology" name="criminology">
+    <label for="criminology">Criminology</label>
+    
+    <input type="checkbox" id="biochemistry" name="biochemistry">
+    <label for="biochemistry">Biochemistry</label>
+    
+    <input type="checkbox" id="software" name="software-engineering">
+    <label for="software">Software Engineering</label>
+    
+    <input type="checkbox" id="political" name="political-science">
+    <label for="political">Political Science</label>
+    
+    <input type="checkbox" id="computer-science" name="computer-Science">
+    <label for="computer-science">Computer Science</label> 
+
+    <input type="checkbox" id="accounting" name="accounting">
+    <label for="accounting">Accounting</label> 
+
+    <input type="checkbox" id="bankingfinance" name="banking-and-finance">
+    <label for="bankingfinance">Banking and Finance</label> 
+
+    <input type="checkbox" id="music" name="music">
+    <label for="music">Music</label> 
+
+    <input type="checkbox" id="anthropology" name="anthropology">
+    <label for="anthropology">Anthropology</label> 
+
+</fieldset>
+
+
+<fieldset>
+    <legend><strong>Additional Information</strong></legend>
+
+<div>
+    <label for="address">Address</label><br>
+    <textarea id="address" name="address" rows="3" required></textarea>
+</div>
+
+<div>
+  <label for="special">Special Requirements (Optional)</label><br>
+  <textarea id="special" name="special" rows="3"></textarea>
+</div>
+
+</fieldset>
+
+<button type="submit">Submit</button>
+</form>
+    
+</body>
+</html>
